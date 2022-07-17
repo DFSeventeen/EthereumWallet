@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A60D74C32882CAC800A22EA7 /* EtheremWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D74C22882CAC800A22EA7 /* EtheremWalletApp.swift */; };
-		A60D74C52882CAC800A22EA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D74C42882CAC800A22EA7 /* ContentView.swift */; };
 		A60D74C72882CAD200A22EA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60D74C62882CAD200A22EA7 /* Assets.xcassets */; };
 		A60D74CA2882CAD200A22EA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A60D74C92882CAD200A22EA7 /* Preview Assets.xcassets */; };
 		A60D74CC2882CAD200A22EA7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A60D74CB2882CAD200A22EA7 /* Persistence.swift */; };
@@ -24,6 +23,9 @@
 		A687445F2883146800A90A4D /* MessariNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A687445E2883146800A90A4D /* MessariNewsViewModel.swift */; };
 		A687446228831EF700A90A4D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A687446128831EF700A90A4D /* ActivityIndicator.swift */; };
 		A687446428831F1E00A90A4D /* MessariListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A687446328831F1E00A90A4D /* MessariListView.swift */; };
+		A68744662883A69800A90A4D /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68744652883A69800A90A4D /* WebView.swift */; };
+		A68744692883A7E600A90A4D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A68744682883A7E600A90A4D /* HomeView.swift */; };
+		A687446B2883BF2D00A90A4D /* ImportIdentityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A687446A2883BF2D00A90A4D /* ImportIdentityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +48,6 @@
 /* Begin PBXFileReference section */
 		A60D74BF2882CAC800A22EA7 /* EtheremWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EtheremWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A60D74C22882CAC800A22EA7 /* EtheremWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EtheremWalletApp.swift; sourceTree = "<group>"; };
-		A60D74C42882CAC800A22EA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A60D74C62882CAD200A22EA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A60D74C92882CAD200A22EA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A60D74CB2882CAD200A22EA7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -64,6 +65,9 @@
 		A687445E2883146800A90A4D /* MessariNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariNewsViewModel.swift; sourceTree = "<group>"; };
 		A687446128831EF700A90A4D /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		A687446328831F1E00A90A4D /* MessariListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessariListView.swift; sourceTree = "<group>"; };
+		A68744652883A69800A90A4D /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		A68744682883A7E600A90A4D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A687446A2883BF2D00A90A4D /* ImportIdentityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportIdentityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,15 +118,13 @@
 		A60D74C12882CAC800A22EA7 /* EtheremWallet */ = {
 			isa = PBXGroup;
 			children = (
+				A68744672883A75C00A90A4D /* Srtorage */,
 				A687446028831EE200A90A4D /* Views */,
 				A687445D288313CA00A90A4D /* ViewModels */,
 				A687445A2883116700A90A4D /* Models */,
 				A68744512883051600A90A4D /* Network */,
 				A60D74C22882CAC800A22EA7 /* EtheremWalletApp.swift */,
-				A60D74C42882CAC800A22EA7 /* ContentView.swift */,
 				A60D74C62882CAD200A22EA7 /* Assets.xcassets */,
-				A60D74CB2882CAD200A22EA7 /* Persistence.swift */,
-				A60D74CD2882CAD200A22EA7 /* EtheremWallet.xcdatamodeld */,
 				A60D74C82882CAD200A22EA7 /* Preview Content */,
 			);
 			path = EtheremWallet;
@@ -185,8 +187,20 @@
 			children = (
 				A687446128831EF700A90A4D /* ActivityIndicator.swift */,
 				A687446328831F1E00A90A4D /* MessariListView.swift */,
+				A68744652883A69800A90A4D /* WebView.swift */,
+				A68744682883A7E600A90A4D /* HomeView.swift */,
+				A687446A2883BF2D00A90A4D /* ImportIdentityView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A68744672883A75C00A90A4D /* Srtorage */ = {
+			isa = PBXGroup;
+			children = (
+				A60D74CD2882CAD200A22EA7 /* EtheremWallet.xcdatamodeld */,
+				A60D74CB2882CAD200A22EA7 /* Persistence.swift */,
+			);
+			path = Srtorage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,16 +334,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A60D74CC2882CAD200A22EA7 /* Persistence.swift in Sources */,
+				A68744692883A7E600A90A4D /* HomeView.swift in Sources */,
 				A60D74CF2882CAD200A22EA7 /* EtheremWallet.xcdatamodeld in Sources */,
+				A68744662883A69800A90A4D /* WebView.swift in Sources */,
 				A68744572883085C00A90A4D /* ServiceProvider.swift in Sources */,
 				A68744532883053100A90A4D /* EndpointProtocol.swift in Sources */,
 				A687445928830BBE00A90A4D /* MessariService.swift in Sources */,
 				A687446228831EF700A90A4D /* ActivityIndicator.swift in Sources */,
-				A60D74C52882CAC800A22EA7 /* ContentView.swift in Sources */,
 				A687446428831F1E00A90A4D /* MessariListView.swift in Sources */,
 				A68744552883057D00A90A4D /* Endpoints.swift in Sources */,
 				A687445F2883146800A90A4D /* MessariNewsViewModel.swift in Sources */,
 				A687445C288311A800A90A4D /* MessariNews.swift in Sources */,
+				A687446B2883BF2D00A90A4D /* ImportIdentityView.swift in Sources */,
 				A60D74C32882CAC800A22EA7 /* EtheremWalletApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,30 +11,31 @@ struct MessariListView : View {
     @ObservedObject var viewModel = MessariNewsViewModel()
     
     var body: some View {
-        NavigationView(content: {
             VStack {
                 if viewModel.messariNewsArray.isEmpty {
                     ActivityIndicator()
+                        .frame(width: UIScreen.main.bounds.width,
+                               height: 50,
+                               alignment: .center)
                 } else {
                     List(viewModel.messariNewsArray, id: \.self) { source in
-//                        NavigationLink(
-//                            destination:
-//                                .navigationBarTitle(Text(source.name)),
-//                            label: {
-//                                Text(source.name)
-//                            }
-//                        )
-                                    
-                        Text(source.title)
-
+                        NavigationLink {
+                            WebView(url: URL(string: source.url) ?? URL(string: "https://messari.io")!)
+                                .navigationBarTitle(Text(source.title), displayMode: .inline)
+                            
+                        } label: {
+                            Text(source.title)
+                                .frame(height: 44, alignment: .leading)
+                                .foregroundColor(.gray)
+                        }
                     }
-                    .listStyle(GroupedListStyle())
+                    .listStyle(PlainListStyle())
                     .environment(\.horizontalSizeClass, .regular)
                 }
+                Spacer()
             }
             .onAppear {
                 self.viewModel.getSources()
             }
-        })
     }
 }

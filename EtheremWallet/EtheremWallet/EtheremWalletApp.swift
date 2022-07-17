@@ -13,7 +13,7 @@ struct EtheremWalletApp: App {
 
     var body: some Scene {
         WindowGroup {
-            MessariListView()
+            HomeView()
         }
     }
 }
